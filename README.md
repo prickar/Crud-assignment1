@@ -8,14 +8,16 @@ This project is written in Node.js and is using the server Express.js
 3. When you have all the npm packages down, you have to run the command > `npm run dev`
 
 ### How to use and install Postman 
-1. Now when we have the project down we should download the program Postman > `https://www.postman.com/downloads/ `
-2. Open the program and start a new "Collection"
-3. For every endpoint i soon will explain you have to start up a new "Request" in your collection. 
-4. In the URL section you always start with the host you are doing your endpoints from, ex. this project use `http://localhost:3009` in the beginning and later on add the URL thats requested in all the endpoint i will explain later on.
-5. For the endpoints POST and PUT you have to go to the `body` section in your request and choose `raw` and `JSON` as the format. 
+ **Once you have downloaded the project, you can start using Postman to interact with its endpoints. Follow these steps:**
+
+1. Download Postman from (https://www.postman.com/downloads/).
+2. Open Postman and create a new collection.
+3. For each endpoint in the project, create a new request within your collection.
+4. In the URL field of the request, start with the host from which you are serving your endpoints. For example, this project uses `http://localhost:3009` as the host. Then add the specific path for the endpoint you want to use, which I will explain later on.
+5. If you are using a POST or PUT request, go to the `Body` section of your request and choose `raw` as the input type. Then select `JSON` as the format.
 
 #### API key
-1. This project have a Api key connected to iself, so when you start using endpoints you have to add the apiKey in the end of the URL ex. `http://localhost:3009/movies/tt0284083?apiKey=5`
+1. This project is connected to an API key, which means that you need to include the apiKey in the URL when using any of its endpoints. For example, if you want to access the `tt0284083` movie endpoint, you would use the following format: `http://localhost:3009/movies/tt0284083?apiKey=5`.
 
 
 # LETS START DOING SOME ENDPOINTS
@@ -23,29 +25,29 @@ This project is written in Node.js and is using the server Express.js
 ### To GET all the movie 
 Method: `GET`<br>
 URL: `/movies`<br>
-**When you run this enpoint in Postman you will se a list for all the movies that exist in the mockdata thats connected for this project**
+**When you run this endpoint in Postman, you will see a list of all the movies that exist in the mock data connected to this project.**
 
 ### GET a specific movie based on their ID 
 Method: `GET`<br>
 URL: `/movies/:id`<br>
-**When you run this endpoint and choose a specific ID number, you will find the ID number in the movies list beside the imdbID section, take that ID number and run the endpoint**
+**When you run this endpoint and choose a specific ID number, you will find the corresponding IMDb ID in the movies list next to the imdbID section. Take that IMDb ID and use it as the input for another request to the endpoint.**
 
 ### POST up a new movie 
 Method: `POST` <br>
 URL: `/movies` <br>
 Body:`{ "movie": {"Title": "Movie title", "Year": "A numbered year", "Released": "A numbered release date", "Genre": "Movie genre"}}` <br>
-**Like a explained before in the installtion part for `Postman` this is the POST endpoint, so here you have to add the information you want to `POST` in the `Body` section in `Postman`, `!OBS!` here you have to make sure that the year and released part is in number or it will not be accepted in the request**
+**As mentioned in the installation instructions for Postman, this is a POST endpoint. To use it, you need to provide the information you want to POST in the Body section of your request in Postman. Be aware that for the year and released fields, you must use numerical values - otherwise, the request will not be accepted.**
   
 ### PUT in information in a existing ID > update the ID 
 Method: `PUT` <br>
 URL: `/movies/:id`<br>
 Body:`{ "movie": {"Title": "Movie title", "Year": "A numbered year", "Released": "A numbered release date", "Genre": "Movie genre"}}` <br>
-**Like in `GET` you find have to use a ID number from imdbID for this endpoint, and as in `POST` if you going to update year and released you have to use number, play around and change and se on the movie list how the movie have changed its information**
+**Similar to the GET endpoint, the ID number from imdbID must be used to access this endpoint. Likewise with POST, if you want to update the year and released fields, numerical values must be used. Feel free to experiment by changing these fields and observing how the movie list reflects the updated information**
 
 ### DELETE a movie based on their ID
 Method: `DELETE` <br>
 URL: `/movies/:id` <br>
-**At this endpoint you can delete a movie and to do that you use one of the imdbID and put it in the URL just like in `GET` and the movie should be deleted**
+**This endpoint allows you to delete a movie by specifying its imdbID in the URL, similar to how it is done in the GET endpoint. Once the correct imdbID is included in the URL, the movie associated with that ID will be deleted.**
 
 
 
