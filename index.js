@@ -6,7 +6,7 @@ const port = 3009;
 
 app.use(express.json());
 
-const validApiKey = "5";
+const validApiKey = ["5", "10"];
 
 const authenticateApiKey = (req, res, next) => {
   const apiKey = req.query.apiKey;
