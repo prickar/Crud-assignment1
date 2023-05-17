@@ -18,28 +18,28 @@ This project is written in Node.js and is using the server Express.js
 1. This project have a Api key connected to iself, so when you start using endpoints you have to add the apiKey in the end of the URL ex. `http://localhost:3009/movies/tt0284083?apiKey=5`
 
 
-***********************LETS START DOING SOME ENDPOINT****************************
+# LETS START DOING SOME ENDPOINTS
 
 ### To GET all the movie 
-Method: `GET`
-URL: `/movies`
+Method: `GET`<br>
+URL: `/movies`<br>
 **When you run this enpoint in Postman you will se a list for all the movies that exist in the mockdata thats connected for this project**
 
 ### GET a specific movie based on their ID 
-Method: `GET`
-URL: `/movies/:id`
+Method: `GET`<br>
+URL: `/movies/:id`<br>
 **When you run this endpoint and choose a specific ID number, you will find the ID number in the movies list beside the imdbID section, take that ID number and run the endpoint**
 
 ### POST up a new movie 
-Method: `POST`
-URL: `/movies`
-Body:`{ "movie": {"Title": "Movie title", "Year": "A numbered year", "Released": "A numbered release date", "Genre": "Movie genre"}}`
+Method: `POST` <br>
+URL: `/movies` <br>
+Body:`{ "movie": {"Title": "Movie title", "Year": "A numbered year", "Released": "A numbered release date", "Genre": "Movie genre"}}` <br>
 **Like a explained before in the installtion part for `Postman` this is the POST endpoint, so here you have to add the information you want to `POST` in the `Body` section in `Postman`, `!OBS!` here you have to make sure that the year and released part is in number or it will not be accepted in the request**
   
 ### PUT in information in a existing ID > update the ID 
-Method: `PUT`
-URL: `/movies/:id`
-Body:`{ "movie": {"Title": "Movie title", "Year": "A numbered year", "Released": "A numbered release date", "Genre": "Movie genre"}}`
+Method: `PUT` <br>
+URL: `/movies/:id`<br>
+Body:`{ "movie": {"Title": "Movie title", "Year": "A numbered year", "Released": "A numbered release date", "Genre": "Movie genre"}}` <br>
 **Like in `GET` you find have to use a ID number from imdbID for this endpoint, and as in `POST` if you going to update year and released you have to use number, play around and change and se on the movie list how the movie have changed its information**
 
 ### DELETE a movie based on their ID
