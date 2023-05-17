@@ -1,5 +1,5 @@
 # API information
-This project is a project that handles a movie array that you can handle in the program Postman. 
+This project is a project that handles a movie array that you can handle in the program Postman. <br>
 This project is written in Node.js and is using the server Express.js
 
 ## How to run it > installation 
