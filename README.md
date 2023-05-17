@@ -43,8 +43,8 @@ Body:`{ "movie": {"Title": "Movie title", "Year": "A numbered year", "Released":
 **Like in `GET` you find have to use a ID number from imdbID for this endpoint, and as in `POST` if you going to update year and released you have to use number, play around and change and se on the movie list how the movie have changed its information**
 
 ### DELETE a movie based on their ID
-Method: `DELETE` 
-URL: `/movies/:id` 
+Method: `DELETE` <br>
+URL: `/movies/:id` <br>
 **At this endpoint you can delete a movie and to do that you use one of the imdbID and put it in the URL just like in `GET` and the movie should be deleted**
 
 
