@@ -47,7 +47,7 @@ router.post("/", (req, res) => {
 
 	const addMovie = {
 		...movie,
-		imdbID: nextId,
+		imdbID: nextId.toString()
 	};
 
 	nextId++;
@@ -60,10 +60,9 @@ router.post("/", (req, res) => {
 
 router.put("/:id", (req, res) => {
 	const imdbID = req.params.id;
-	const IDnumber = imdbID;
 	const movie = req.body.movie;
 
-	const index = movies.findIndex((film) => film.imdbID === IDnumber);
+	const index = movies.findIndex((film) => film.imdbID === imdbID);
 
 	if (!movie.Title || !movie.Year || !movie.Released || !movie.Genre) {
 		return res
@@ -95,15 +94,14 @@ router.put("/:id", (req, res) => {
 
 router.delete("/:id", (req, res) => {
 	const imdbID = req.params.id;
-	const IDnumber = imdbID;
 
-	const movie = movies.find((film) => film.imdbID === IDnumber);
+	const movie = movies.find((film) => film.imdbID === imdbID);
 
 	if (!movie) {
 		return res.status(404).json({ message: "No movie with this Id exist" });
 	}
 
-	const newData = movies.filter((film) => film.imdbID !== IDnumber);
+	const newData = movies.filter((film) => film.imdbID !== imdbID);
 	movies = newData;
 
 	res.json({ message: "The movie ' " + movie.Title + "' have been deleted" });
